@@ -3,12 +3,12 @@
 
 #include <QWidget>
 
-#include <QListWidget>
+#include <QGridLayout>
 
 class EntryLetter;
 class QGridLayout;
 
-class EntryLine : public QListWidget
+class EntryLine : public QGridLayout
 {
     Q_OBJECT
 public:
@@ -16,8 +16,8 @@ public:
     ~EntryLine();
 
 private:
-    const int letters;
-    QGridLayout *layout;
+    const int numLetters;
+    EntryLetter *entryLetters;
 };
 
 #endif // ENTRYLINE_H

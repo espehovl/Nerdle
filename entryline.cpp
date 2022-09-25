@@ -6,11 +6,19 @@
 #include <QList>
 
 EntryLine::EntryLine(QWidget *parent):
-    QListWidget(parent),
-    letters(5),
-    layout(new QGridLayout(parent))
+    QGridLayout(parent),
+    numLetters(5),
+    entryLetters(new EntryLetter[numLetters])
 {
-    layout->addWidget(new EntryLetter(this));
+
+    for (int i = 0; i < numLetters; ++i){
+        this->addWidget(&entryLetters[i], 0, i, 1, 1);
+    }
+
+    entryLetters[0].setCorrectLetter();
+    entryLetters[1].setPerfectLetter();
+    entryLetters[2].setWrongLetter();
+
 }
 
 EntryLine::~EntryLine()

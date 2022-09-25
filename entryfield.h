@@ -2,11 +2,12 @@
 #define ENTRYFIELD_H
 
 #include <QWidget>
+#include <QGridLayout>
 
 
-class QListWidget;
+class EntryLine;
 
-class EntryField : public QWidget
+class EntryField : public QGridLayout
 {
     Q_OBJECT
 public:
@@ -14,7 +15,10 @@ public:
     ~EntryField();
 
 private:
-    QListWidget *entryList;
+
+    int guesses;
+
+    EntryLine   *entryLines;
 
 };
 

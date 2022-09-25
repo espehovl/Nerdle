@@ -27,6 +27,10 @@ set(PROJECT_SOURCES
         entryline.cpp
         entryletter.h
         entryletter.cpp
+        keyboard.h
+        keyboard.cpp
+        key.h
+        key.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

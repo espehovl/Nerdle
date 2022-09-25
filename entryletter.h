@@ -2,24 +2,31 @@
 #define ENTRYLETTER_H
 
 #include <QWidget>
+#include <QLabel>
 #include <QListWidgetItem>
 
 #include <QColor>
 #include <QFont>
 
-class QLabel;
 
-class EntryLetter : public QWidget
+
+class EntryLetter : public QLabel
 {
 Q_OBJECT
 
 public:
     EntryLetter(QWidget *parent = nullptr);
 
+    void setWrongLetter();
+    void setCorrectLetter();
+    void setPerfectLetter();
+
+    const QString &getContent() const;
+    void setContent(const QString &newContent);
+
+private:
     QFont  font;
-    QLabel *content;
-
-
+    QString content;
 };
 
 #endif // ENTRYLETTER_H
