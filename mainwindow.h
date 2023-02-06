@@ -6,18 +6,16 @@
 #include <QMainWindow>
 
 
-//class QGridLayout;
-
 class MainWindow : public QMainWindow
 {
-    Q_OBJECT
+  Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+  MainWindow(QWidget *parent = nullptr);
+  ~MainWindow();
 
 
-    MainWidget *mainWidget;
+  MainWidget *mainWidget;
 private:
 
 };

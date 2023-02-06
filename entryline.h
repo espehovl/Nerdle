@@ -10,14 +10,14 @@ class QGridLayout;
 
 class EntryLine : public QGridLayout
 {
-    Q_OBJECT
+  Q_OBJECT
 public:
-    EntryLine(QWidget *parent = nullptr);
-    ~EntryLine();
+  EntryLine(QWidget *parent = nullptr);
+  ~EntryLine();
 
 private:
-    const int numLetters;
-    EntryLetter *entryLetters;
+  const int numLetters;
+  EntryLetter *entryLetters;
 };
 
 #endif // ENTRYLINE_H

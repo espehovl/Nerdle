@@ -31,6 +31,8 @@ set(PROJECT_SOURCES
         keyboard.cpp
         key.h
         key.cpp
+        nerdle.h
+        nerdle.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

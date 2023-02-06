@@ -4,12 +4,12 @@
 #include <QGridLayout>
 
 MainWindow::MainWindow(QWidget *parent):
-    QMainWindow(parent),
-    mainWidget(new MainWidget(parent))
+  QMainWindow(parent),
+  mainWidget(new MainWidget(parent))
 {
-    setWindowTitle(tr("Nerdle"));
+  setWindowTitle(tr("Nerdle"));
 
-    setCentralWidget(mainWidget);
+  setCentralWidget(mainWidget);
 }
 
 MainWindow::~MainWindow()

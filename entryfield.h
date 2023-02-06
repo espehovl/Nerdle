@@ -9,16 +9,16 @@ class EntryLine;
 
 class EntryField : public QGridLayout
 {
-    Q_OBJECT
+  Q_OBJECT
 public:
-    EntryField(QWidget *parent = nullptr);
-    ~EntryField();
+  EntryField(QWidget *parent = nullptr);
+  ~EntryField();
 
 private:
 
-    int guesses;
+  int guesses;
 
-    EntryLine   *entryLines;
+  EntryLine   *entryLines;
 
 };
 

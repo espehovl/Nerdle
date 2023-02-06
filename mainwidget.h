@@ -6,22 +6,27 @@
 #include <QWidget>
 
 
+class QGridLayout;
+class QThread;
+
 class EntryField;
 class Keyboard;
-class QGridLayout;
+class Nerdle;
 
 class MainWidget: public QWidget
 {
-    Q_OBJECT
+  Q_OBJECT
 public:
-    MainWidget(QWidget *parent = 0);
-    ~MainWidget();
+  MainWidget(QWidget *parent = 0);
+  ~MainWidget();
 
-    QGridLayout *mainLayout;
+  QGridLayout *mainLayout;
 private:
-    EntryField  *entryField;
-    Keyboard    *keyboard;
+  EntryField  *entryField;
+  Keyboard    *keyboard;
 
+  Nerdle      *nerdle;
+  QThread     *workThread;
 };
 
 #endif // MAINWIDGET_H

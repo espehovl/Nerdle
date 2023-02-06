@@ -9,21 +9,21 @@ class Key;
 
 class Keyboard : public QGridLayout
 {
-    Q_OBJECT
+  Q_OBJECT
 public:
-    Keyboard(QWidget *parent = 0);
+  Keyboard(QWidget *parent = 0);
 
 private:
-    int trn;
-    int mrn;
-    int brn;
+  int trn;
+  int mrn;
+  int brn;
 
-    Key *topRow;
-    Key *midRow;
-    Key *botRow;
+  Key *topRow;
+  Key *midRow;
+  Key *botRow;
 
-    Key *enterBtn;
-    Key *clearBtn;
+  Key *enterBtn;
+  Key *clearBtn;
 
 };
 
