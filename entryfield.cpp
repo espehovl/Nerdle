@@ -12,13 +12,10 @@ EntryField::EntryField(QWidget *parent):
     entryLines(new EntryLine[guesses])
 {
     for (int i = 0; i < guesses; ++i){
-        //entryLines[i].setParent(parent);
         this->addLayout(&entryLines[i], i, 0);
-        //entryLines[i].show();
     }
 }
 
 EntryField::~EntryField()
 {
-    //delete entryList;
 }

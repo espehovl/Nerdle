@@ -6,7 +6,7 @@
 #include <QMainWindow>
 
 
-class QGridLayout;
+//class QGridLayout;
 
 class MainWindow : public QMainWindow
 {
@@ -17,8 +17,8 @@ public:
     ~MainWindow();
 
 
-private:
     MainWidget *mainWidget;
+private:
 
 };
 #endif // MAINWINDOW_H

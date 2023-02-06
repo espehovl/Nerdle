@@ -4,10 +4,11 @@
 #include <QMainWindow>
 #include <QObject>
 #include <QWidget>
-#include <QGridLayout>
+
 
 class EntryField;
 class Keyboard;
+class QGridLayout;
 
 class MainWidget: public QWidget
 {
@@ -16,8 +17,8 @@ public:
     MainWidget(QWidget *parent = 0);
     ~MainWidget();
 
+    QGridLayout *mainLayout;
 private:
-    QGridLayout *layout;
     EntryField  *entryField;
     Keyboard    *keyboard;
 

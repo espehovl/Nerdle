@@ -8,23 +8,25 @@
 #include <QFont>
 
 MainWidget::MainWidget(QWidget *parent):
-    layout(new QGridLayout(this)),
-    entryField(new EntryField(this)),
-    keyboard(new Keyboard(this))
+    mainLayout(new QGridLayout(this)),
+    entryField(new EntryField(parent)),
+    keyboard(new Keyboard(parent))
 {
-    QLabel titleLabel;
+    QLabel *titleLabel = new QLabel("NERDLE", parent);
     QFont  font;
 
     font.setFamily("Arial");
-    font.setPointSize(30);
+    font.setPointSize(50);
 
-    titleLabel.setText("NERDLE");
-    titleLabel.setFont(font);
+    titleLabel->setFont(font);
+    titleLabel->show();
 
-    layout->addWidget(&titleLabel, 0, 0);
-    layout->addLayout(entryField, 1, 0);
-    layout->addLayout(keyboard, 2, 0);
+    QGridLayout *titleLayout = new QGridLayout(parent);
+    titleLayout->addWidget(titleLabel);
 
+    mainLayout->addLayout(titleLayout, 0, 0, Qt::AlignCenter);
+    mainLayout->addLayout(entryField, 1, 0);
+    mainLayout->addLayout(keyboard, 2, 0);
 }
 
 MainWidget::~MainWidget()
