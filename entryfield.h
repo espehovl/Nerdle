@@ -10,6 +10,7 @@ class EntryLine;
 class EntryField : public QGridLayout
 {
   Q_OBJECT
+
 public:
   EntryField(QWidget *parent = nullptr);
   ~EntryField();

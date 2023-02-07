@@ -10,6 +10,7 @@ class Key;
 class Keyboard : public QGridLayout
 {
   Q_OBJECT
+
 public:
   Keyboard(QWidget *parent = 0);
 

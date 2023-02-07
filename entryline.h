@@ -11,6 +11,7 @@ class QGridLayout;
 class EntryLine : public QGridLayout
 {
   Q_OBJECT
+
 public:
   EntryLine(QWidget *parent = nullptr);
   ~EntryLine();

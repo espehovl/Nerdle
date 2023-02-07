@@ -8,8 +8,6 @@
 #include <QColor>
 #include <QFont>
 
-
-
 class EntryLetter : public QLabel
 {
   Q_OBJECT
