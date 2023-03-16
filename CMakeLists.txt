@@ -33,6 +33,7 @@ set(PROJECT_SOURCES
         key.cpp
         nerdle.h
         nerdle.cpp
+        words.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

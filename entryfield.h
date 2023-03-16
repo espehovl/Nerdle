@@ -15,9 +15,17 @@ public:
   EntryField(QWidget *parent = nullptr);
   ~EntryField();
 
+  bool placeLetterGuess(QChar letter);
+  int  detractGuess();
+
+  void clearCurrentLine();
+
 private:
 
   int guesses;
+  int activeRow;
+  int activeCol;
+
 
   EntryLine   *entryLines;
 

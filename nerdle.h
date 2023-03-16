@@ -3,17 +3,30 @@
 
 #include <QObject>
 
+class QRandomGenerator;
+
 class Nerdle : public QObject
 {
+  Q_OBJECT
+
 public:
-  Nerdle(QObject *parent = 0);
+  Nerdle(QObject *parent = nullptr);
   ~Nerdle();
 
 signals:
   void gameConcluded();
 
 public slots:
-  void run();
+  void runGame();
+
+private:
+  void newGame();
+  QString getNerdleWord();
+
+  QRandomGenerator *rng;
+
+  bool gameRunning;
+  QString solution;
 };
 
 #endif // NERDLE_H

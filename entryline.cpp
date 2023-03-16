@@ -24,3 +24,15 @@ EntryLine::EntryLine(QWidget *parent):
 EntryLine::~EntryLine()
 {
 }
+
+void EntryLine::placeLetter(int x, QChar letter)
+{
+  entryLetters[x].setContent(letter);
+}
+
+void EntryLine::clearLine()
+{
+  for (int i = 0; i < numLetters; i++){
+    entryLetters[i].setContent("");
+  }
+}

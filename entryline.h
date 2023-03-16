@@ -16,6 +16,9 @@ public:
   EntryLine(QWidget *parent = nullptr);
   ~EntryLine();
 
+  void placeLetter(int x, QChar letter);
+  void clearLine();
+
 private:
   const int numLetters;
   EntryLetter *entryLetters;

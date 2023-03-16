@@ -41,4 +41,16 @@ const QString &EntryLetter::getContent() const
 void EntryLetter::setContent(const QString &newContent)
 {
   content = newContent;
+
+  if (content == ";"){
+    content = "Å";
+  }
+  else if (content == ":"){
+    content = "Ø";
+  }
+  else if (content == "*"){
+    content = "Æ";
+  }
+
+  this->setText(content);
 }
